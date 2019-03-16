@@ -22,8 +22,8 @@ public class Registration_Page
    		   Base_Class.getDriver().manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES); 
    		 }
          
-   		 @FindBy(linkText="Home")
-   		  WebElement HomeButton;
+//   		 @FindBy(linkText="Home")
+//   		  WebElement HomeButton;
    		 
    		 @FindBy(xpath="//*[@id=\"myCarousel\"]/div/div/div/div/div/div[1]/div/button")
    		  WebElement joinus;
@@ -52,11 +52,6 @@ public class Registration_Page
          @FindBy(xpath="//input[@id='emailId']")
          WebElement emailId;
          
-         @FindBy(xpath="//input[@id='password']")
-         WebElement Password;
-
-   	     @FindBy(xpath="//input[@id='confirmpassword']")
-   	     WebElement confirmpassword;
 
    	     @FindBy(xpath="//input[@id='residentSuitApartment']")
    	     WebElement residentSuitApartment;
@@ -76,14 +71,13 @@ public class Registration_Page
          @FindBy(xpath="//textarea[@formcontrolname='residentAddress']")
          WebElement residentAddress;
 
-         @FindBy(xpath="//div[16][@class='row  p-l-15']/label/span")
+         @FindBy(xpath="/html/body/app-root/app-root/app-layout/section/app-register/div[3]/div/div[3]/form/div[15]/label/span")
          WebElement checkboxOne;
-   	
-         @FindBy(xpath="//form/div[17]/label/span")
+   
+         @FindBy(xpath="/html/body/app-root/app-root/app-layout/section/app-register/div[3]/div/div[3]/form/div[16]/label/span")
          WebElement CheckTwo;
  
-
-         @FindBy(xpath="//form/div[18]/label/span")
+         @FindBy(xpath="/html/body/app-root/app-root/app-layout/section/app-register/div[3]/div/div[3]/form/div[17]/label/span")
          WebElement CheckThree;
 
    	     @FindBy(xpath="//button[@class='btn btn-default btn-lg submit-btn']")
@@ -95,77 +89,103 @@ public class Registration_Page
    		 @FindBy(xpath="//a[@class='proceedlink' and text()='Proceed']")
    		 WebElement ProceedBtn;
    		 
-   		 @FindBy(xpath="//td[text()='Jayanthi']")
+   		 @FindBy(xpath="//td[text()='Nagaraj']")
    		 WebElement defaultUserName;
    		 
+   		@FindBy(id="action-bar-btn-continue")
+  		 WebElement cont;
+  		 
+  		 @FindBy(id="comments-tooltip-btn-ok")
+  		 WebElement ok;
+  		 
+  		@FindBy(className="tab-content-wrapper")
+ 		 WebElement signin;
+  		 
+  		 @FindBy(xpath="//*[@id=\"action-bar-btn-finish\"]")
+        WebElement finish;
+  		 
+  		 @FindBy(xpath="//*[@id=\"paypal-animation-content\"]/div[1]/div[1]")
+  		 WebElement paypal;
+   		 
    		
-   		 public void HomeButtonClicked()
-   		 {
-   			 System.out.println("Wellcome ClickHome POM");
-   			 HomeButton.click();
-   			 HomeButton.click();
-   		 } 
+//   		 public void HomeButtonClicked()
+//   		 {
+//   			 System.out.println("Wellcome ClickHome POM");
+//   			 HomeButton.click();
+//   			 HomeButton.click();
+//   		 } 
    		 
-   		 public void join()
-   		 {
-   			 System.out.println("Wellcome ClickHome POM");
-   			 joinus.click();
-   		 } 
+//   		 public void join()
+//   		 {
+//   			 System.out.println("Wellcome ClickHome POM");
+//   			 joinus.click();
+//   		 } 
    		 
-   		 public void ClickSubmitbtn() throws InterruptedException
-   		 {
-   			Thread.sleep(300);
-   			Submitbtn.click(); 
-   		 }
+//   		 public void ClickSubmitbtn() throws InterruptedException
+//   		 {
+//   			Thread.sleep(300);
+//   			Submitbtn.click(); 
+//   		 }
    			
    		 
-   		 public void registrationAgent()
-   		 {
-   			 try
-   			 {
-   			   JavascriptExecutor js = (JavascriptExecutor)Base_Class.getDriver();
-   			   js.executeScript("scrollBy(0,500)");
-   			   
-   			    sponserId.click();	
-   			    sponserId.sendKeys("122");
-   				firstName.sendKeys("Nagaraj");
-   	   			lastName.sendKeys("Lakshatti");
-   	   			ssnNumber_name.sendKeys("1010");
-   	   			genderSelection.click();
-   	   		    optionMale.click();
-   	   			PhoneNumber.sendKeys("8123839200");
-   	   		    emailId.sendKeys("nagaraj.lakshatti11@gmail.com");
-   	   			Password.sendKeys("Nagaraj@12");
-   	   			confirmpassword.sendKeys("Nagaraj@12");
-   	   			residentSuitApartment.sendKeys("No 15");
-   	   			residentCity.sendKeys("Bengalore");
-   	   			residentCountry.sendKeys("India");
-   	   		    residentState.sendKeys("Karnataka");
-   	   			residentZipcode.sendKeys("560036");
-   	   			residentAddress.sendKeys("Bengalore");
-   	   		
-			    js.executeScript("scrollBy(0,100)");
-			    Thread.sleep(300);
-			    
-   	   			checkboxOne.click();
-   	   			CheckTwo.click();
-   	   		    CheckThree.click();
-   	   			
-   	   		    Thread.sleep(300);
-   	   			Submitbtn.click();
-   	   			
-   	   			Assert.assertEquals("Register Successfully !", "Register Successfully !");
-   	   		    ProceedBtn.click();
-   	   		   
-   	   	        Thread.sleep(300);
-   	   		    js.executeScript("scrollBy(0,-500)");
-   	   		    Assert.assertEquals(defaultUserName, defaultUserName); 
+//   		 public void registrationAgent()
+//   		 {
+//   			 try
+//   			 {
+//   			   JavascriptExecutor js = (JavascriptExecutor)Base_Class.getDriver();
+//   			   js.executeScript("scrollBy(0,500)");
+//   			   
+//   			    sponserId.click();	
+//   			    sponserId.sendKeys("122");
+//   				firstName.sendKeys("Nagaraj");
+//   	   			lastName.sendKeys("Lakshatti");
+//   	   			ssnNumber_name.sendKeys("1010");
+//   	   			genderSelection.click();
+//   	   		    optionMale.click();
+//   	   			PhoneNumber.sendKeys("8123839200");
+//   	   		    emailId.sendKeys("anjith.jjbytes@gmail.com");
+//   	   			residentSuitApartment.sendKeys("No 15");
+//   	   			residentCity.sendKeys("Bengalore");
+//   	   			residentCountry.sendKeys("India");
+//   	   		    residentState.sendKeys("Karnataka");
+//   	   			residentZipcode.sendKeys("560036");
+//   	   			residentAddress.sendKeys("Bengalore");
+//   	   		
+//   	   		js.executeScript("scrollBy(0,100)");
+//		    Thread.sleep(3000);
+//		    
+//	   			checkboxOne.click();
+//	   			CheckTwo.click();
+//	   		    CheckThree.click();
+//	   			
+//	   		    Thread.sleep(3000);
+//	   			Submitbtn.click();
+	   			
+//	   			Assert.assertEquals("Register Successfully !", "Register Successfully !");
+//	   		    ProceedBtn.click();
+	   		   
+	   		    
+//	   	        Thread.sleep(3000);
+//	   	        cont.click();
+//	   	       Thread.sleep(2000);
+//	   	        ok.click();
+//	   	     Thread.sleep(4000);
+//	   	    signin.click();
+//	        Thread.sleep(2000);
+//	        finish.click();
+//	        Thread.sleep(2000);
+//	   		    js.executeScript("scrollBy(0,5000)");
+//	   		    Assert.assertEquals(defaultUserName, defaultUserName); 
+//	   		    paypal.click();
+//	   		    Thread.sleep(5000);
+	   		    
    	   		    
-   			 }
-   			 catch (Exception e) 
-   			 {
-				e.printStackTrace();
-			 }
-   		 }	 
+
+
+//   			 catch (Exception e) 
+//   			 {
+//				e.printStackTrace();
+//			 }
+   		  
 }
 
