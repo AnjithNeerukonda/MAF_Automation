@@ -1,0 +1,77 @@
+
+
+
+* Verify the sponser id validation with valid sponser id 
+
+* Verify the sponser id validation with invalid id
+
+* Verify the sponser id validation with empty id
+
+* Verify the Revenue Analyst at level 1 which is complete 5 PR and 2 lic commision is 17.5%(RD)
+ 
+* Verify the Revenue Analyst at level 2 which is complete 10 PR and 7 lic commision is 20%(SRD)
+ 
+* Verify the Revenue Analyst at level 3 which is complete 15 PR and 15 lic commision is 12.5%(RRD)
+
+* Verify the Revenue Analyst at level 4 which is complete 20 PR and commision is 7.5%(ERD) and verify the cap amount also $84,000 
+
+* Verify the Revenue Analyst at level 5 which is complete 25 PR and commision is 10%(CEO)
+ 
+* Verify the Revenue Analyst at level 1 which is complete 30 PR and commision is 12.5%(FRC)
+
+* Verify the Revenue Analyst at level 1 which is complete 35 PR and commision is 20%(EVC)
+
+                      
+                     A1(RD) (17.5% COMMISION)
+       
+                 B1    B2(RD)   B3  B4  B5
+
+
+* Verify the  A1 Agent his poition is level 0 when he starting the PR 
+
+* Verify the  A1 Agent with  4  Recruites B1,B2,B3,B4 and 1 lic
+
+* Verify the  A1 Agent with  5 Recruites B1,B2,B3,B4,B5 and 1 lic
+
+* Verify the  A1 Agent with  4  Recruites B1,B2,B3,B4 and 2 lic
+
+* Verify the  A1 Agent with  5  Recruites B1,B2,B3,B4,B5 and 2 lic -PASS
+
+
+    
+
+                   B2(RD <-> SRD)  (20% COMMISION)
+
+              C1  C2(RD) C3 C4 C5 C6 C7 C8 C9 C10
+
+*  Verify the  B2 Agent with  8  Recruites C1,C2,C3,C4,C5,C6,C7,C8 B4 and 5 lic
+
+*  Verify the  B2 Agent with  8  Recruites C1,C2,C3,C4,C5,C6,C7,C8 B4 and 7 lic
+
+* Verify the  B2 Agent with  10  Recruites C1,C2,C3,C4,C5,C6,C7,C8 B4 and 7 lic - PASS 
+
+   
+               B2(SRD <-> RRD)  (12.5% COMMISION)
+
+
+       C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15 
+
+* Verify the  B2 Agent with  10 Recruites C1,C2,C3,C4,C5,C6,C7,C8 ..C10 and 8 lic
+
+* Verify the  B2 Agent with  15  Recruites C1,C2,C3,C4,C5,C6,C7,C8 ..C15 and 14 lic
+
+* Verify the  B2 Agent with  15  Recruites C1,C2,C3,C4,C5,C6,C7,C8 ..C15 and 15 lic - PASS
+
+
+
+                     B2 (RRD <-> ERD) (CAP AMOUNT - $ 84,000) (7.5% COMMISION)
+
+       C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 .. C20
+
+*  Verify the  B2 Agent with  10 Recruites C1,C2,C3,C4,C5,C6,C7,C8 ..C10 and  CAP AMOUNT - $20,000
+
+* Verify the  B2 Agent with  15 Recruites C1,C2,C3,C4,C5,C6,C7,C8 ..C15 and CAP AMOUNT -$85,000
+
+* Verify the  B2 Agent with  20 Recruites C1,C2,C3,C4,C5,C6,C7,C8 ..C20 and CAP AMOUNT -$80,000
+
+* Verify the  B2 Agent with  20 Recruites C1,C2,C3,C4,C5,C6,C7,C8 ..C20 and CAP AMOUNT -$ 84,000
