@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Multi Group Suite]">
+  <test thread-count="5" name="Group Test one(failed)">
+    <groups>
+      <run>
+        <include name="group-one"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MAF.MultipleTest">
+        <methods>
+          <include name="testMethodTwo"/>
+          <include name="testMethodOne"/>
+        </methods>
+      </class> <!-- MAF.MultipleTest -->
+    </classes>
+  </test> <!-- Group Test one(failed) -->
+  <test thread-count="5" name="Group Test two(failed)">
+    <groups>
+      <run>
+        <include name="group-two"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="MAF.MultipleTest">
+        <methods>
+          <include name="testMethodTwo"/>
+        </methods>
+      </class> <!-- MAF.MultipleTest -->
+    </classes>
+  </test> <!-- Group Test two(failed) -->
+</suite> <!-- Failed suite [Multi Group Suite] -->

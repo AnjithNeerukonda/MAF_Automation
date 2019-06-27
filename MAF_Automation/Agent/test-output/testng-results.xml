@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40112" started-at="2019-05-28T07:30:15Z" finished-at="2019-05-28T07:30:55Z">
+  <suite name="LoginTest" duration-ms="36690" started-at="2019-06-27T11:47:28Z" finished-at="2019-06-27T11:48:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="40112" started-at="2019-05-28T07:30:15Z" finished-at="2019-05-28T07:30:55Z">
-      <class name="MAF.Maf_Base">
-        <test-method status="PASS" signature="setupWeb()[pri:0, instance:MAF.Maf_Base@490ab905]" name="setupWeb" duration-ms="40069" started-at="2019-05-28T07:30:15Z" finished-at="2019-05-28T07:30:55Z">
+    <test name="ParallelTest2 Browser Firefox" duration-ms="26480" started-at="2019-06-27T11:47:28Z" finished-at="2019-06-27T11:47:55Z">
+      <class name="MAF.MultipleTest">
+        <test-method status="PASS" signature="getBrowser(java.lang.String)[pri:0, instance:MAF.MultipleTest@3327bd23]" name="getBrowser" is-config="true" duration-ms="26472" started-at="2019-06-27T11:47:28Z" finished-at="2019-06-27T11:47:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupWeb -->
-      </class> <!-- MAF.Maf_Base -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- getBrowser -->
+      </class> <!-- MAF.MultipleTest -->
+    </test> <!-- ParallelTest2 Browser Firefox -->
+    <test name="ParallelTest1 Browser Chrome" duration-ms="36690" started-at="2019-06-27T11:47:28Z" finished-at="2019-06-27T11:48:05Z">
+      <class name="MAF.MultipleTest">
+        <test-method status="PASS" signature="getBrowser(java.lang.String)[pri:0, instance:MAF.MultipleTest@6e1567f1]" name="getBrowser" is-config="true" duration-ms="36684" started-at="2019-06-27T11:47:28Z" finished-at="2019-06-27T11:48:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBrowser -->
+      </class> <!-- MAF.MultipleTest -->
+    </test> <!-- ParallelTest1 Browser Chrome -->
+  </suite> <!-- LoginTest -->
 </testng-results>

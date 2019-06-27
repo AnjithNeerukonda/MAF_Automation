@@ -1,9 +1,9 @@
 package MAF;
 
-
-
 import java.awt.AWTException;
 import java.awt.List;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -39,31 +39,65 @@ public class Maf_Base
 //	        options.addArguments("--incognito");
 //	        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 //	        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\driver\\chromedriver.exe");
-//			driver = new ChromeDriver(capabilities);
-		    
-//		      
+//			driver = new ChromeDriver(capabilities);  
 	    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\driver\\chromedriver.exe");
 	    	driver = new ChromeDriver();
-	   	     
-		      
+	   	        
+		    
 //	    	System.setProperty("webdriver.gecko.driver", "D:\\drivers\\geckodriver.exe");
 //	     	driver = new FirefoxDriver();
-	     	
-			driver.get("http://localhost:4200/register");
+	    	driver.get("http://www.google.com");
+	    	driver.manage().window().maximize();
+			driver.get("http://localhost:4200/home");
+	     	//driver.get("file://Downloads/Max Agent Financial.html");
 	        System.out.println(driver.getTitle());
+	        driver.manage().deleteAllCookies();
 		    driver.manage().window().maximize();
+		   // Robot robot = new Robot();
 		    
 		    
-            
+		    
+		    test tobj=new test();
+		   // tobj.
+		    
+//		    robot.keyPress(KeyEvent.VK_CONTROL);
+//		    robot.keyPress(KeyEvent.VK_MINUS);
+//		    robot.keyRelease(KeyEvent.VK_CONTROL);
+//		    robot.keyRelease(KeyEvent.VK_MINUS);
+//		    Thread.sleep(3000);  
+//		    robot.keyPress(KeyEvent.VK_CONTROL);
+//		    robot.keyPress(KeyEvent.VK_EQUALS);
+//		    robot.keyRelease(KeyEvent.VK_CONTROL);
+//		    robot.keyRelease(KeyEvent.VK_EQUALS);
+		    
+		    
+//		    JavascriptExecutor jse = (JavascriptExecutor)driver;
+//		    jse.executeScript("document.body.style.zoom = '30%';");
+//		    jse.executeScript("document.body.style.zoom = '125%';");
+		    
+		    
+		    
+		  //  Agent_tasks agobj=new Agent_tasks();
+		   // agobj.mypromations();
+		   // agobj.promations();
+		    
+		    
+		    
+		    
 		      //REGISTRATION METHODS
 		     
-		    Registration_Page rgobj=new Registration_Page();
-		   	rgobj.join();
-		   	rgobj.registrationAgent();
+//		    Registration_Page rgobj=new Registration_Page();
+//		   	rgobj.join();
+//		   	rgobj.registrationAgent();
+//		    listdropdown objli=new listdropdown();
+//		    objli.list3();
 		    	
 		   	
 		   	
-		   	
+		   //	Content_testing cobj=new Content_testing();
+		   	//cobj.content();
+		   //	cobj.compare();
+		  // 	cobj.pagesource();
 		    
 		    
 		    
@@ -134,7 +168,7 @@ public class Maf_Base
 //		   	linkobj.lin();
 		    
 		    
-		    Demo dobj=new Demo();
+		   // Demo dobj=new Demo();
 		          
 		    
 		    

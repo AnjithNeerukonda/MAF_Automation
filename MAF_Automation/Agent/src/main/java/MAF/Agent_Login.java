@@ -29,10 +29,10 @@ public class Agent_Login {
 	@FindBy(xpath="//*[@id=\"collapseExample\"]/ul/li[6]/a")
 	public WebElement Loginbutton;
 	
-	@FindBy(xpath="//*[@id=\"agentId\"]")
+	@FindBy(xpath="//input[@id='agentId']")
     public WebElement username;
 	
-	@FindBy(xpath="//*[@id=\"password\"]")
+	@FindBy(xpath="//input[@id='password']")
 	public WebElement Password;
 	
 	@FindBy(xpath="/html/body/app-root/app-root/app-auth-layout/div/div/app-agentlogin/div/div/div/form/div/div[3]/button")

@@ -26,7 +26,6 @@ public class Registration_Page
 		public Registration_Page()
    		 {
    		   PageFactory.initElements(Maf_Base.getDriver(), this); 
-   		    
    		  Maf_Base.getDriver().manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS); 
    		 }
          
@@ -163,17 +162,17 @@ public class Registration_Page
    			    
    			    
    			    sponserId.click();	
-   			    sponserId.sendKeys("AAA15");
+   			    sponserId.sendKeys("AAA31");
    			    
    			    
-   				firstName.sendKeys("Agentfive");
+   				firstName.sendKeys("Agent");
    	   			lastName.sendKeys("testing");
-   	   		    Select sec=new Select(genderSelection);
+ 	   		    Select sec=new Select(genderSelection);
 	   			sec.selectByIndex(1);
 	   			DOB.sendKeys("30/05/1996");
-	   			PhoneNumber.sendKeys("9541070911");
+	   			PhoneNumber.sendKeys("9541070100");
 	   			ssnNumber_name.sendKeys("1010");
-   	   		    emailId.sendKeys("testingone294@gmail.com");
+   	   		    emailId.sendKeys("testingone296@gmail.com");
    	   		    js.executeScript("scrollBy(0,100)");
    	   		    
    	   		    
