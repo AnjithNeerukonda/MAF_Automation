@@ -17,7 +17,6 @@ public class MultipleTest{
 
 
 	@BeforeTest
-
 	@Parameters("myBrowser")
 	public void getBrowser(String myBrowser) throws InterruptedException {
 		
@@ -72,10 +71,7 @@ public class MultipleTest{
 				WebDriver chromedriver=new ChromeDriver(capabilities);
 				chromedriver.manage().window().maximize();
 				chromedriver.get("http://localhost:4200/maf-agent/agent-profile");
-				
-				
 				Thread.sleep(3000);
-				
 				//driver.findElement(By.id("lst-ib")).sendKeys("Selenium");
 				
 				

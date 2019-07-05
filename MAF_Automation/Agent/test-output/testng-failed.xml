@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [LoginTest]" parallel="tests">
-  <test thread-count="2" name="ParallelTest1 Browser Chrome(failed)" parallel="tests">
-    <parameter name="myBrowser" value="chrome"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MAF.jav">
+      <class name="MAF.Multiplecommission">
         <methods>
-          <include name="getBrowser"/>
-          <include name="testLogin"/>
+          <include name="Allcommission"/>
         </methods>
-      </class> <!-- MAF.jav -->
+      </class> <!-- MAF.Multiplecommission -->
     </classes>
-  </test> <!-- ParallelTest1 Browser Chrome(failed) -->
-  <test thread-count="2" name="ParallelTest2 Browser Firefox(failed)" parallel="tests">
-    <parameter name="myBrowser" value="firefox"/>
-    <classes>
-      <class name="MAF.jav">
-        <methods>
-          <include name="getBrowser"/>
-          <include name="testLogin"/>
-        </methods>
-      </class> <!-- MAF.jav -->
-    </classes>
-  </test> <!-- ParallelTest2 Browser Firefox(failed) -->
-</suite> <!-- Failed suite [LoginTest] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

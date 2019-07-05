@@ -1,39 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="LoginTest" duration-ms="36690" started-at="2019-06-27T11:47:28Z" finished-at="2019-06-27T11:48:05Z">
+  <suite name="Default suite" duration-ms="90933" started-at="2019-07-05T10:18:03Z" finished-at="2019-07-05T10:19:34Z">
     <groups>
     </groups>
-    <test name="ParallelTest2 Browser Firefox" duration-ms="26480" started-at="2019-06-27T11:47:28Z" finished-at="2019-06-27T11:47:55Z">
-      <class name="MAF.MultipleTest">
-        <test-method status="PASS" signature="getBrowser(java.lang.String)[pri:0, instance:MAF.MultipleTest@3327bd23]" name="getBrowser" is-config="true" duration-ms="26472" started-at="2019-06-27T11:47:28Z" finished-at="2019-06-27T11:47:55Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="90933" started-at="2019-07-05T10:18:03Z" finished-at="2019-07-05T10:19:34Z">
+      <class name="MAF.Responsibility_levels">
+        <test-method status="PASS" signature="Responsibility()[pri:0, instance:MAF.Responsibility_levels@dc24521]" name="Responsibility" duration-ms="90879" started-at="2019-07-05T10:18:03Z" finished-at="2019-07-05T10:19:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getBrowser -->
-      </class> <!-- MAF.MultipleTest -->
-    </test> <!-- ParallelTest2 Browser Firefox -->
-    <test name="ParallelTest1 Browser Chrome" duration-ms="36690" started-at="2019-06-27T11:47:28Z" finished-at="2019-06-27T11:48:05Z">
-      <class name="MAF.MultipleTest">
-        <test-method status="PASS" signature="getBrowser(java.lang.String)[pri:0, instance:MAF.MultipleTest@6e1567f1]" name="getBrowser" is-config="true" duration-ms="36684" started-at="2019-06-27T11:47:28Z" finished-at="2019-06-27T11:48:05Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getBrowser -->
-      </class> <!-- MAF.MultipleTest -->
-    </test> <!-- ParallelTest1 Browser Chrome -->
-  </suite> <!-- LoginTest -->
+        </test-method> <!-- Responsibility -->
+      </class> <!-- MAF.Responsibility_levels -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

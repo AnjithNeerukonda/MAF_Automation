@@ -42,11 +42,9 @@ public class Maf_Base
 //			driver = new ChromeDriver(capabilities);  
 	    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\driver\\chromedriver.exe");
 	    	driver = new ChromeDriver();
-	   	        
-		    
 //	    	System.setProperty("webdriver.gecko.driver", "D:\\drivers\\geckodriver.exe");
 //	     	driver = new FirefoxDriver();
-	    	driver.get("http://www.google.com");
+	    	
 	    	driver.manage().window().maximize();
 			driver.get("http://localhost:4200/home");
 	     	//driver.get("file://Downloads/Max Agent Financial.html");
@@ -54,9 +52,6 @@ public class Maf_Base
 	        driver.manage().deleteAllCookies();
 		    driver.manage().window().maximize();
 		   // Robot robot = new Robot();
-		    
-		    
-		    
 		    test tobj=new test();
 		   // tobj.
 		    
