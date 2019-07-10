@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 public class Responsibility_levels {
@@ -29,10 +30,12 @@ public class Responsibility_levels {
 	public void Responsibility() throws InterruptedException, IOException {
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\driver\\chromedriver.exe");
+//		ChromeOptions optn=new ChromeOptions();
+//		optn.addArguments("----headless");
+//		optn.setHeadless(true);
 		driver = new ChromeDriver();
 		driver.get("http://localhost:4200/home");
-		driver.manage().window().maximize();
-
+		driver.manage().window().maximize();                                                      
 		WebElement Loginbutton=driver.findElement(By.xpath("//a[contains(text(),'Agent Login')]"));
 		Loginbutton.click();
 		Thread.sleep(3000);
@@ -40,16 +43,13 @@ public class Responsibility_levels {
 	    fis = new FileInputStream(scr);
 	    wb = new XSSFWorkbook(fis);
 	    String data0;
-
+        
 	    try {
 	        sheet1= wb.getSheetAt(0);
 	        int rowCount = sheet1.getLastRowNum();
-
-	     
-
-
 	        for (int row=0; row<=rowCount; row++)
-	        {          
+	        {  
+	        	
 	        	WebElement username=driver.findElement(By.xpath("//input[@id='agentId']"));
 	            String user = sheet1.getRow(row).getCell(0).getStringCellValue();
 				username.sendKeys(user);
@@ -62,9 +62,9 @@ public class Responsibility_levels {
 	            WebElement Login=driver.findElement(By.xpath("//button[@class='btn btn-info fw btn-round btn-lg btn-block mb-3']"));
 	            Login.click();
 	            Thread.sleep(3000);
-		Thread.sleep(8000);
-		WebElement lev=driver.findElement(By.xpath("//p[contains(text(),'Levels Hierarchy')]"));
-		lev.click();
+	         	Thread.sleep(8000);
+		         WebElement lev=driver.findElement(By.xpath("//p[contains(text(),'Levels Hierarchy')]"));
+	         	lev.click();
 		System.out.println("******Agent Responsibility Level ******************");
 		Thread.sleep(5000);
 		//WebElement tab=driver.findElement(By.xpath("//div[@class='main-content']//div[2]//div[1]//div[2]//ul[2]"));
@@ -72,12 +72,10 @@ public class Responsibility_levels {
 		System.out.println("Headers in table are below:");
 		System.out.println("Total headers found: "+Commissiontable.size());
 		for(WebElement tab1:Commissiontable)
-		{
+		{   	
 			System.out.println(tab1.getText());
 			Thread.sleep(4000);
-			
-			System.out.println("**********Next Agent Responsibility****");
-			
+			System.out.println("**********Next Agent Responsibility****");   
 		}
 		WebElement logout=driver.findElement(By.xpath("//div[@class='main-panel']//li[2]//a[1]"));
 		logout.click();
@@ -89,7 +87,5 @@ public class Responsibility_levels {
 	            e.printStackTrace();
 	        }
 		}
-		
-		
 	}
 

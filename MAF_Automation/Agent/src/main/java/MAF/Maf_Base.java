@@ -241,12 +241,9 @@ public class Maf_Base
 	}
     
 	public static java.util.List<WebElement> findElements(By tagName) {
-		// TODO Auto-generated method stub
+		
 		return (java.util.List<WebElement>) driver;
 	}
-	
-	
-	
 	
 }
 

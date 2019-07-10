@@ -35,8 +35,7 @@ public class Api{
             file.createNewFile();			
             FileWriter fileWrite = new FileWriter(file);							
             BufferedWriter Bwrite = new BufferedWriter(fileWrite);							
-            // loop for getting the cookie information 		
-            	
+            // loop for getting the cookie information 		           	
             // loop for getting the cookie information 		
             for(Cookie ck : Maf_Base.getDriver().manage().getCookies())							
             {			

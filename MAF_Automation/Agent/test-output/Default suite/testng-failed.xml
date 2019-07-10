@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MAF.Multiplecommission">
+      <class name="MAF.Agent_Promations_list">
         <methods>
-          <include name="Allcommission"/>
+          <include name="Agenttask"/>
+          <include name="admin"/>
         </methods>
-      </class> <!-- MAF.Multiplecommission -->
+      </class> <!-- MAF.Agent_Promations_list -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
