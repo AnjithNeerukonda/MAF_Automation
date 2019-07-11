@@ -12,55 +12,54 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 public class Agent_tasks {
-	
-	public Agent_tasks() 
-	 {
-	   PageFactory.initElements(Maf_Base.getDriver(), this); 
-	 }
-	
-	@FindBy(xpath="//a[contains(text(),'Agent Login')]")
+
+	public Agent_tasks() {
+		PageFactory.initElements(Maf_Base.getDriver(), this);
+	}
+
+	@FindBy(xpath = "//a[contains(text(),'Agent Login')]")
 	public WebElement agentlogin;
-	
-	@FindBy(xpath="/html/body/app-root/app-root/app-agentlayout/div/app-sidebar/div/div[2]/ul/li[6]")
+
+	@FindBy(xpath = "/html/body/app-root/app-root/app-agentlayout/div/app-sidebar/div/div[2]/ul/li[6]")
 	public WebElement AgentTasks;
-	
-	@FindBy(css="#ngb-tab-1")
-    public WebElement Agentpromations;	
-	
-	@FindBy(css=".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(7)")
+
+	@FindBy(css = "#ngb-tab-1")
+	public WebElement Agentpromations;
+
+	@FindBy(css = ".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(7)")
 	public WebElement status;
-	
-	@FindBy(css=".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(11)")
+
+	@FindBy(css = ".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(11)")
 	public WebElement processd;
-	
-	@FindBy(css=".navbar-nav > li:nth-child(2) > a:nth-child(1)")
+
+	@FindBy(css = ".navbar-nav > li:nth-child(2) > a:nth-child(1)")
 	public WebElement logout;
-	
-	@FindBy(css=".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(10)")
+
+	@FindBy(css = ".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(10)")
 	public WebElement proceed;
-	
-	@FindBy(xpath="//*[@id=\"disclosureAccepted\"]")
+
+	@FindBy(xpath = "//*[@id=\"disclosureAccepted\"]")
 	public WebElement checkbox;
-	
-	@FindBy(css=".continue-button-wrapper")
+
+	@FindBy(css = ".continue-button-wrapper")
 	public WebElement conti;
-	
-	@FindBy(xpath="/html/body/div[1]/div[2]/div/div/div/section[3]/div/div[2]/div[4]/div/section/div/div[1]/div[4]/div/button/div/div/svg")
+
+	@FindBy(xpath = "/html/body/div[1]/div[2]/div/div/div/section[3]/div/div[2]/div[4]/div/section/div/div[1]/div[4]/div/button/div/div/svg")
 	public WebElement signin;
-	
-	@FindBy(xpath="//*[@id=\"action-bar-btn-finish\"]")
+
+	@FindBy(xpath = "//*[@id=\"action-bar-btn-finish\"]")
 	public WebElement fnsh;
-	
-	Agent_Login li=new Agent_Login();
+
+	Agent_Login li = new Agent_Login();
+
 	@Test
 	public void promations() throws InterruptedException {
-	
-		//List<WebElement> allElements=Maf_Base.getDriver().findElements(By.xpath("//body//app-sidebar//li"));
-		//System.out.println("Size of List: "+allElements.size());
-		//System.out.println("Element name"+allElements.indexOf(AgentTasks));
-		
-		
-		
+
+		// List<WebElement>
+		// allElements=Maf_Base.getDriver().findElements(By.xpath("//body//app-sidebar//li"));
+		// System.out.println("Size of List: "+allElements.size());
+		// System.out.println("Element name"+allElements.indexOf(AgentTasks));
+
 //		agentlogin.sendKeys(Keys.chord(Keys.CONTROL, Keys.ADD));
 //		Thread.sleep(3000);
 //		agentlogin.sendKeys(Keys.chord(Keys.CONTROL, Keys.SUBTRACT));
@@ -72,20 +71,20 @@ public class Agent_tasks {
 		li.Login.click();
 		Thread.sleep(7000);
 		AgentTasks.click();
-		Thread.sleep(3000);		
+		Thread.sleep(3000);
 		Agentpromations.click();
-	    Thread.sleep(3000);
+		Thread.sleep(3000);
 		status.getText();
-		
-		if(processd.isEnabled()) {
-			
-			
+
+		if (processd.isEnabled()) {
+
 			List<WebElement> dropdown_items = new ArrayList();
-			dropdown_items = Maf_Base.getDriver().findElements(By.cssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(10)"));
+			dropdown_items = Maf_Base.getDriver()
+					.findElements(By.cssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(10)"));
 			dropdown_items.get(0).click();
 			dropdown_items.get(1).click();
 			dropdown_items.get(2).click();
-			
+
 			processd.click();
 			System.out.println("Proceed button is Enable");
 			Thread.sleep(10000);
@@ -94,24 +93,22 @@ public class Agent_tasks {
 			signin.click();
 			Thread.holdsLock(3000);
 			fnsh.click();
-			
-			
-			//logout.click();
-			//Maf_Base.getDriver().close();
-		}
-		else {
-			
+
+			// logout.click();
+			// Maf_Base.getDriver().close();
+		} else {
+
 			Thread.sleep(4000);
-			
+
 			logout.click();
 			System.out.println("Proceed button is NotEnable");
-			
+
 		}
-		
+
 	}
 
 	public void mypromations() throws InterruptedException {
-		
+
 		agentlogin.click();
 		Thread.sleep(7000);
 		AgentTasks.click();
@@ -124,6 +121,6 @@ public class Agent_tasks {
 		AgentTasks.click();
 		Thread.sleep(3000);
 		proceed.click();
-		
+
 	}
 }

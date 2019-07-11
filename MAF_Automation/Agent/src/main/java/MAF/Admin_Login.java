@@ -19,102 +19,94 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 public class Admin_Login {
-	
-	public Admin_Login() 
-	 {
-	   PageFactory.initElements(Maf_Base.getDriver(), this); 
-	 }
-	
-	
-	@FindBy(xpath="//*[@id=\"navigation\"]/ul/li[5]/a")
+
+	public Admin_Login() {
+		PageFactory.initElements(Maf_Base.getDriver(), this);
+	}
+
+	@FindBy(xpath = "//*[@id=\"navigation\"]/ul/li[5]/a")
 	public WebElement admin_button;
-	
-	@FindBy(id="emailId")
+
+	@FindBy(id = "emailId")
 	public WebElement admin_username;
-	
-	@FindBy(css="#password")
+
+	@FindBy(css = "#password")
 	public WebElement admin_Pswd;
-	
-	@FindBy(xpath="/html/body/app-root/app-root/app-auth-layout/div/div/app-adminlogin/div/div/div/form/div/div[3]/button")
+
+	@FindBy(xpath = "/html/body/app-root/app-root/app-auth-layout/div/div/app-adminlogin/div/div/div/form/div/div[3]/button")
 	public WebElement admin_submit;
-	
-	@FindBy(xpath="/html/body/app-root/app-root/app-adminlayout/div/app-sidebar/div/div[2]/ul/li[2]/a/p")
+
+	@FindBy(xpath = "/html/body/app-root/app-root/app-adminlayout/div/app-sidebar/div/div[2]/ul/li[2]/a/p")
 	public WebElement Agentlist;
-	
+
 //	@FindBy(xpath="/html/body/app-root/app-root/app-adminlayout/div/div/app-agentslist/div[2]/div/div/div/div[2]/div/table/tbody")
 //	public WebElement tablebody;
-	
-	@FindBy(xpath="/html/body/app-root/app-root/app-adminlayout/div/div/app-agentslist/div[2]/div/div/div/div[2]/div/table/tbody/tr[1]/td[5]/button")
+
+	@FindBy(xpath = "/html/body/app-root/app-root/app-adminlayout/div/div/app-agentslist/div[2]/div/div/div/div[2]/div/table/tbody/tr[1]/td[5]/button")
 	public WebElement viewbutton;
-	
-	@FindBy(css=".table > tbody:nth-child(2)")
+
+	@FindBy(css = ".table > tbody:nth-child(2)")
 	public WebElement table;
-	
-	@FindBy(css=".btn-success")
+
+	@FindBy(css = ".btn-success")
 	public WebElement approve;
-	
-	@FindBy(css="button.btn:nth-child(2)")
+
+	@FindBy(css = "button.btn:nth-child(2)")
 	public WebElement reject;
-	
-	@FindBy(css=".swal2-confirm")
+
+	@FindBy(css = ".swal2-confirm")
 	public WebElement okbttn;
-	
-	@FindBy(css=".col-md-12 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(5) > button:nth-child(1)")
+
+	@FindBy(css = ".col-md-12 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(5) > button:nth-child(1)")
 	public WebElement associate;
-	
-	@FindBy(css="textarea.form-control")
+
+	@FindBy(css = "textarea.form-control")
 	public WebElement rejreason;
-	
-	@FindBy(css="div.form-group:nth-child(7) > button:nth-child(1)")
+
+	@FindBy(css = "div.form-group:nth-child(7) > button:nth-child(1)")
 	public WebElement submit;
-	
-	@FindBy(css=".close")
+
+	@FindBy(css = ".close")
 	public WebElement clse;
-	
-	@FindBy(xpath="/html/body/div/div/div[3]/button[1]")
+
+	@FindBy(xpath = "/html/body/div/div/div[3]/button[1]")
 	public WebElement ok;
-	
-	
-	
-	@FindBy(css=".col-md-12 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > button:nth-child(1)")
-     public WebElement appoint;	
-	
-	
-	@FindBy(css=".table > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(4)")
+
+	@FindBy(css = ".col-md-12 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > button:nth-child(1)")
+	public WebElement appoint;
+
+	@FindBy(css = ".table > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(4)")
 	public WebElement email;
-	
-	@FindBy(css=".swal2-confirm")
+
+	@FindBy(css = ".swal2-confirm")
 	public WebElement yes;
 //	@FindBy(css=".swal2-confirm")
 //	public WebElement Rej;
-	
-	
+
 	@Test
 	public void Longin() throws InterruptedException {
-		
-		Maf_Base.getDriver().manage().timeouts().implicitlyWait( 10, TimeUnit.SECONDS);
-		JavascriptExecutor js = (JavascriptExecutor)Maf_Base.getDriver();
+
+		Maf_Base.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		JavascriptExecutor js = (JavascriptExecutor) Maf_Base.getDriver();
 		Thread.sleep(3000);
 		admin_button.click();
-		//Thread.sleep(3000);
+		// Thread.sleep(3000);
 		admin_username.sendKeys("jitesh@jjbytes.com");
-		
+
 		admin_Pswd.sendKeys("jjbytes@123");
-		//Thread.sleep(3000);
+		// Thread.sleep(3000);
 		admin_submit.click();
 		Cookie name = new Cookie("T", "2GHCYCGVJVVUVUV");
 		Cookie name1 = new Cookie("S", "CKGCUVKUIVI");
 		Cookie name2 = new Cookie("SA", "Cjnjjnkj");
-		Cookie name3 = new Cookie("AC","njnjk");
-		Cookie name4 =new Cookie("EA","bsxaxa");
-		
-		
+		Cookie name3 = new Cookie("AC", "njnjk");
+		Cookie name4 = new Cookie("EA", "bsxaxa");
+
 		Maf_Base.getDriver().manage().addCookie(name);
 		Maf_Base.getDriver().manage().addCookie(name1);
-		
-	
-		//Maf_Base.get
-		//Maf_Base.getDriver().switchTo().alert().accept();
+
+		// Maf_Base.get
+		// Maf_Base.getDriver().switchTo().alert().accept();
 //		Thread.sleep(3000);
 //		Agentlist.click();
 //		Thread.sleep(3000);
@@ -123,8 +115,8 @@ public class Admin_Login {
 //		Thread.sleep(4000);
 //		approve.click();
 //		yes.click();
-		//reject.click();
-		
+		// reject.click();
+
 //			if(ok.isDisplayed())
 //			{
 //				ok.click();
@@ -140,8 +132,7 @@ public class Admin_Login {
 //			
 //			
 //		}	
-		
-		
+
 //		
 //		if(appoint.isDisplayed()) {
 //			
@@ -161,7 +152,7 @@ public class Admin_Login {
 //		else{
 //			
 //		}
-	
+
 //		if(submit.isDisplayed()) {
 //			
 //			
@@ -199,16 +190,15 @@ public class Admin_Login {
 //			
 //		}
 //		}
-		
-		
+
 	}
 
 	public void viewlist() throws InterruptedException {
-			
+
 		Thread.sleep(2000);
 		Agentlist.click();
 		Thread.sleep(3000);
-		
+
 //		for(int i=1; i>8;i++) {
 //			WebElement str=Maf_Base.getDriver().findElement(By.name("View"));
 //			Thread.sleep(3000);
@@ -219,20 +209,20 @@ public class Admin_Login {
 //			
 //			
 //		}
-		
+
 //		List<WebElement> le= (List<WebElement>) table.findElements(By.className("ng-star-inserted"));
 //		System.out.println("table data=" +le.size());
-		
-		//List<WebElement> le= (List<WebElement>) table.findElements(By.cssSelector("tr.ng-star-inserted:nth-child"));
-		//System.out.println("table data=" +le.size());
+
+		// List<WebElement> le= (List<WebElement>)
+		// table.findElements(By.cssSelector("tr.ng-star-inserted:nth-child"));
+		// System.out.println("table data=" +le.size());
 //		for(int i=1;i>8;i++)
 //		{
 //			table.findElements(By.cssSelector("tr.ng-star-inserted:nth-child("+i+")")).get(i);
 //			System.out.println(i);
 //			
 //		}
-		
-		
+
 	}
 
 }

@@ -25,36 +25,33 @@ import org.testng.annotations.Test;
 //import COM.MAF.TESTCASES.Agent_Registration_Form_TestCase;
 import cucumber.api.java.Before;
 
-public class Maf_Base
-{	
+public class Maf_Base {
 	public static WebDriver driver;
-	
 
 	@Test
 	public static void setupWeb() throws InterruptedException, IOException, AWTException {
-		    
-               
+
 //	        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 //	        ChromeOptions options = new ChromeOptions();
 //	        options.addArguments("--incognito");
 //	        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 //	        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\driver\\chromedriver.exe");
 //			driver = new ChromeDriver(capabilities);  
-	    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\driver\\chromedriver.exe");
-	    	driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\driver\\chromedriver.exe");
+		driver = new ChromeDriver();
 //	    	System.setProperty("webdriver.gecko.driver", "D:\\drivers\\geckodriver.exe");
 //	     	driver = new FirefoxDriver();
-	    	
-	    	driver.manage().window().maximize();
-			driver.get("http://localhost:4200/home");
-	     	//driver.get("file://Downloads/Max Agent Financial.html");
-	        System.out.println(driver.getTitle());
-	        driver.manage().deleteAllCookies();
-		    driver.manage().window().maximize();
-		   // Robot robot = new Robot();
-		    test tobj=new test();
-		   // tobj.
-		    
+
+		driver.manage().window().maximize();
+		driver.get("http://localhost:4200/home");
+		// driver.get("file://Downloads/Max Agent Financial.html");
+		System.out.println(driver.getTitle());
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		// Robot robot = new Robot();
+		test tobj = new test();
+		// tobj.
+
 //		    robot.keyPress(KeyEvent.VK_CONTROL);
 //		    robot.keyPress(KeyEvent.VK_MINUS);
 //		    robot.keyRelease(KeyEvent.VK_CONTROL);
@@ -64,120 +61,90 @@ public class Maf_Base
 //		    robot.keyPress(KeyEvent.VK_EQUALS);
 //		    robot.keyRelease(KeyEvent.VK_CONTROL);
 //		    robot.keyRelease(KeyEvent.VK_EQUALS);
-		    
-		    
+
 //		    JavascriptExecutor jse = (JavascriptExecutor)driver;
 //		    jse.executeScript("document.body.style.zoom = '30%';");
 //		    jse.executeScript("document.body.style.zoom = '125%';");
-		    
-		    
-		    
-		  //  Agent_tasks agobj=new Agent_tasks();
-		   // agobj.mypromations();
-		   // agobj.promations();
-		    
-		    
-		    
-		    
-		      //REGISTRATION METHODS
-		     
+
+		// Agent_tasks agobj=new Agent_tasks();
+		// agobj.mypromations();
+		// agobj.promations();
+
+		// REGISTRATION METHODS
+
 //		    Registration_Page rgobj=new Registration_Page();
 //		   	rgobj.join();
 //		   	rgobj.registrationAgent();
 //		    listdropdown objli=new listdropdown();
 //		    objli.list3();
-		    	
-		   	
-		   	
-		   //	Content_testing cobj=new Content_testing();
-		   	//cobj.content();
-		   //	cobj.compare();
-		  // 	cobj.pagesource();
-		    
-		    
-		    
-		       //LOGIN METHODS
-		    
-		    
+
+		// Content_testing cobj=new Content_testing();
+		// cobj.content();
+		// cobj.compare();
+		// cobj.pagesource();
+
+		// LOGIN METHODS
+
 //		    LoginFlow Lfobj=new LoginFlow();
 //	    	Lfobj.loginscreen();
 //		    Lfobj.profile();
 //			Lfobj.EandO();
 //			Lfobj.loginsurence();
-            
-		   	
+
 //		    Agent_Login Agobj=new Agent_Login();
 //			Agobj.loginscreen();
-		    
-			
+
 //		    Agent_Login_Multipleusers almobj= new Agent_Login_Multipleusers();
 //		   	almobj.AgentLogin();
-		    
-			
+
 //		    Insurence inobj=new Insurence();
 //		   	inobj.addinsu();
-		   	
-		    
-		    
+
 //		    Multi_Log_insu lobj=new Multi_Log_insu();
 //	    	lobj.Loginsurence();
-		    
-		    
-		       //ADMIN METHODS
-		    
+
+		// ADMIN METHODS
+
 //		    Admin_Login adobj=new Admin_Login();
 //	     	adobj.Longin();
 //	     	adobj.viewlist();
-		    
+
 //	     	Changepassword chobj=new Changepassword();
 //	     	chobj.changepswd();
-		    
+
 //			Admin_Login_Multipleusers almobj=new Admin_Login_Multipleusers();
 //		   	almobj.AdminLogin();
-		    
-		    
+
 //			Create_Insurence_company ciobj=new Create_Insurence_company();
 //		   	ciobj.createcompany();
-		    
-		    
+
 //		    Agent_Policies_List alobj=new Agent_Policies_List();
 //		   	alobj.search();
 //			alobj.download();
 //		    alobj.date();		   
 //		   	alobj.upload();
-		    
-		    
-		    
+
 //		    Roles robj=new Roles();
 //			robj.roles();
 //			robj.manageuser();
-		    
-		    
-		    
-		    
-		    
-		   //OTHER METHODS
-		    
-		    
+
+		// OTHER METHODS
+
 //		    All_Page_Links linkobj=new All_Page_Links();
 //		   	linkobj.lin();
-		    
-		    
-		   // Demo dobj=new Demo();
-		          
-		    
-		    
-		  //dobj.Test();
-   	    
+
+		// Demo dobj=new Demo();
+
+		// dobj.Test();
+
 //    	number nuobj=new number();
 //    	nuobj.num();
-        
+
 //		star stobj=new star();
 //		String name1="";
 //		stobj.Base();
 //		stobj.deleteCookieNamedd(name1);
-		
-		
+
 //	   	Api aobj=new Api(); 
 //	   	aobj.cookie();
 
@@ -189,25 +156,20 @@ public class Maf_Base
 //	    adcobj.deleteCookieNamed(name1);
 //	    adcobj.deleteCookieNamedd(name2);
 
-	
-
 //	   	Admin_Login adobj=new Admin_Login();
 //     	adobj.Longin();
 //     	adobj.viewlist();
 
-		//Agent policieslist 
+		// Agent policieslist
 //		
 //	     	Admin_Base aobj=new Admin_Base();
 //	     	aobj.adminlogin();	
-			   
 
 //	   	Insurence inobj=new Insurence();
 //	   	inobj.addinsu();
 
 //	   	Test_Run runobj=new Test_Run();
 //	   	runobj.dashboard();
-
-	   	
 
 //	   	Registration_Multipleusers rgmobj=new Registration_Multipleusers();
 //	   	rgmobj.Agentreg();
@@ -219,7 +181,6 @@ public class Maf_Base
 
 //	   	Thread.sleep(4000);
 //	   	driver.quit();
-
 
 //	   	Broken_Links bkobj=new Broken_Links();
 //	    bkobj.Brok(); 
@@ -234,16 +195,14 @@ public class Maf_Base
 //		Thread.sleep(3000);
 //		driver.quit();
 	}
-    
-	public static WebDriver getDriver()
-	{
+
+	public static WebDriver getDriver() {
 		return driver;
 	}
-    
+
 	public static java.util.List<WebElement> findElements(By tagName) {
-		
+
 		return (java.util.List<WebElement>) driver;
 	}
-	
-}
 
+}

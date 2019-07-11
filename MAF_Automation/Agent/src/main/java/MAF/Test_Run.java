@@ -31,57 +31,46 @@ import org.testng.annotations.Test;
 
 public class Test_Run {
 
+	WebDriver driver;
 
-    WebDriver driver;
+	// String URL =
+	// "https://1ivi50of6a.execute-api.eu-central-1.amazonaws.com/production";
 
-   // String URL = "https://1ivi50of6a.execute-api.eu-central-1.amazonaws.com/production";
-
-    
-    @FindBy(xpath="//*[@id=\"collapseExample\"]/ul/li[6]/a")
+	@FindBy(xpath = "//*[@id=\"collapseExample\"]/ul/li[6]/a")
 	public WebElement Loginbutton;
-	
-	@FindBy(xpath="//*[@id=\"agentId\"]")
-    public WebElement username;
-	
-	@FindBy(xpath="//*[@id=\"password\"]")
+
+	@FindBy(xpath = "//*[@id=\"agentId\"]")
+	public WebElement username;
+
+	@FindBy(xpath = "//*[@id=\"password\"]")
 	public WebElement Password;
-	
-	@FindBy(xpath="/html/body/app-root/app-root/app-auth-layout/div/div/app-agentlogin/div/div/div/form/div/div[3]/button")
+
+	@FindBy(xpath = "/html/body/app-root/app-root/app-auth-layout/div/div/app-agentlogin/div/div/div/form/div/div[3]/button")
 	public WebElement Login;
-	
-	@FindBy(xpath="/html/body/app-root/app-root/app-agentlayout/div/app-sidebar/div/div[2]/ul/li[2]/a/i")
+
+	@FindBy(xpath = "/html/body/app-root/app-root/app-agentlayout/div/app-sidebar/div/div[2]/ul/li[2]/a/i")
 	public WebElement insurence;
-	
-    @BeforeTest
-   public void Setup() throws InterruptedException {
-    	System.setProperty("webdriver.gecko.driver", "D:\\drivers\\geckodriver.exe");
-	  
-       driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-       driver.get("https://1ivi50of6a.execute-api.eu-central-1.amazonaws.com/production/home");
-   
-    	
-     	//driver.manage().timeouts().implicitlyWait( 5, TimeUnit.SECONDS); 
-    	
-     	 Loginbutton.click();
-     	Thread.sleep(3000);
-     	username.sendKeys("AAA13");
-     	Thread.sleep(3000);
-     	Password.sendKeys("DS75JB8be");
-     	Thread.sleep(3000);
-     	Login.click();
-     	Thread.sleep(3000);
-     	insurence.click();
-     	 
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
+
+	@BeforeTest
+	public void Setup() throws InterruptedException {
+		System.setProperty("webdriver.gecko.driver", "D:\\drivers\\geckodriver.exe");
+
+		driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.get("https://1ivi50of6a.execute-api.eu-central-1.amazonaws.com/production/home");
+
+		// driver.manage().timeouts().implicitlyWait( 5, TimeUnit.SECONDS);
+
+		Loginbutton.click();
+		Thread.sleep(3000);
+		username.sendKeys("AAA13");
+		Thread.sleep(3000);
+		Password.sendKeys("DS75JB8be");
+		Thread.sleep(3000);
+		Login.click();
+		Thread.sleep(3000);
+		insurence.click();
+
 //    	WebDriverWait wait = new WebDriverWait(driver, 300 /*timeout in seconds*/);
 //    	if(wait.until(ExpectedConditions.alertIsPresent())==null)
 //    	    System.out.println("alert was not present");
@@ -91,11 +80,11 @@ public class Test_Run {
 //    	    Password.sendKeys("anjith@123");
 //    	    Login.click();
 //    		Maf_Base.getDriver().switchTo().alert().accept();
-    	   
-    }
+
+	}
 
 }
-    	 
+
 //    	 @Test
 //    	 public void Test() throws IOException
 //    	 {
@@ -129,17 +118,12 @@ public class Test_Run {
 //         
 //    	
 //    }
-	
-    	
-    	
+
 //        driver.navigate().to(URL);
-    	
-    	
+
 //    	String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL,"t");
 //    	driver.findElement(By.linkText("URL")).sendKeys(selectLinkOpeninNewTab);
-    	
-    	
-  
+
 //        Thread.sleep(3000);
 //        By locator = By.xpath("//*[@id=\\\"navbar-collapse-1\\\"]/ul/li[5]/a");
 //       // WebDriverWait wait = new WebDriverWait(driver, 5);
@@ -177,8 +161,7 @@ public class Test_Run {
 //       // driver.quit();
 //    	System.out.println("Test Passed");
 // }
-    	
-        
+
 //	   	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\driver\\chromedriver.exe");
 //	   	driver = new ChromeDriver();
 //	   	
@@ -191,11 +174,12 @@ public class Test_Run {
 //		oAction.contextClick(elementOpen).build().perform();  /* this will perform right click */
 //		 /*This will select menu after right click */
 //		elementOpen.click();
-	   	
-	   //	WebElement productLink= driver.findElement(By.linkText("/production/home\""));
-	   	//Actions action= new Actions(driver);
-	   	//action.contextClick(productLink).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.RETURN).build().perform();
-	   
+
+// WebElement productLink=
+// driver.findElement(By.linkText("/production/home\""));
+// Actions action= new Actions(driver);
+// action.contextClick(productLink).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.RETURN).build().perform();
+
 //	   	String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL,"t");
 //	   	driver.findElement(By.tagName("body")).sendKeys(selectLinkOpeninNewTab);
 
@@ -210,24 +194,18 @@ public class Test_Run {
 //
 //	    driver.switchTo().window(tabs.get(0)); // switch back to main screen        
 //	    driver.get("https://www.news.google.com");
-	   	
-	   	
-	   	
-	   	
-	   	
-	   	//String urlLink="http://gmail.com";
+
+// String urlLink="http://gmail.com";
 //	  	driver.get("https://l411w60rx3.execute-api.eu-central-1.amazonaws.com/production/home");
 //	   	driver.get("https://mail.google.com/");
 //	  	String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL,Keys.RETURN); 
 //	  	driver.findElement(By.linkText("www.facebook.com")).sendKeys(selectLinkOpeninNewTab);
 //	  	String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL,Keys.RETURN); 
 //	  	driver.findElement(By.xpath("//*[@id=\"navbar-collapse-1\"]/ul/li[5]/a")).sendKeys(selectLinkOpeninNewTab);
-	  	
+
 //	  	String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL,"t");
 //	  	driver.findElement(By.linkText("urlLink")).sendKeys(selectLinkOpeninNewTab);
-	  	
-	  	
-	   	
+
 //	   	String parent=driver.getWindowHandle();
 //	   	Set<String>s1=driver.getWindowHandles();
 //	   	Iterator<String> I1= s1.iterator();
@@ -253,7 +231,3 @@ public class Test_Run {
 //	    driver.switchTo().window((String) tabs.get(0)); 
 //	    
 //	    driver.get("https://l411w60rx3.execute-api.eu-central-1.amazonaws.com/production/home");
-	    
-	    
-	   	
-
