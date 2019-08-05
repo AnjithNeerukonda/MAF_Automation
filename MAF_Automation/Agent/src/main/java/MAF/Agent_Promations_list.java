@@ -42,7 +42,8 @@ public class Agent_Promations_list {
 		try {
 			sheet1 = wb.getSheetAt(0);
 			int rowCount = sheet1.getLastRowNum();
-			for (int row = 0; row <= rowCount; row++) {
+			for (int row = 0; row <= rowCount; row++)
+			{
 
 				WebElement username = driver.findElement(By.xpath("//input[@id='agentId']"));
 				String user = sheet1.getRow(row).getCell(0).getStringCellValue();
@@ -61,7 +62,6 @@ public class Agent_Promations_list {
 				Thread.sleep(10000);
 				WebElement Agentpromation = driver.findElement(By.xpath("//p[contains(text(),'Agent Promotions')]"));
 				Agentpromation.click();
-
 				System.out.println("******Agent Promations******************");
 				System.out.println("                                            ");
 				Thread.sleep(5000);
@@ -69,7 +69,8 @@ public class Agent_Promations_list {
 				// System.out.println("My promations: ");
 				System.out.println("My Promations : " + agentlist.size());
 				System.out.println("                                            ");
-				for (WebElement tab1 : agentlist) {
+				for (WebElement tab1 : agentlist)
+				{
 					WebElement agentid = driver.findElement(By.xpath("//thead[contains(@class,'text-info')]//tr"));
 					agentid.getText();
 					// System.out.println(tab1.getText());
@@ -83,13 +84,12 @@ public class Agent_Promations_list {
 							"/html[1]/body[1]/app-root[1]/app-root[1]/app-agentlayout[1]/div[1]/div[1]/app-agenttasks[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/ngb-tabset[1]/ul[1]/li[2]/a[1]"));
 					Agentpromat.click();
 					Thread.sleep(5000);
-
 					List<WebElement> agentlist2 = driver.findElements(By.xpath("//table[@class='table']//tbody//tr"));
 					// System.out.println("Agent promations: ");
 					System.out.println("                                            ");
 					System.out.println("Agent promations list: " + agentlist2.size());
-					for (WebElement tab2 : agentlist2) {
-
+					for (WebElement tab2 : agentlist2)
+					{
 						Thread.sleep(3000);
 						// System.out.println(tab2.getText());
 						System.out.println("                                            ");
@@ -97,22 +97,19 @@ public class Agent_Promations_list {
 					}
 					WebElement Agentpromat2 = driver.findElement(By.xpath(
 							"/html[1]/body[1]/app-root[1]/app-root[1]/app-agentlayout[1]/div[1]/div[1]/app-agenttasks[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/ngb-tabset[1]/ul[1]/li[3]/a[1]"));
-					Agentpromat2.click();
+					Agentpromat2.click();					
 					Thread.sleep(5000);
 					List<WebElement> agentlist3 = driver.findElements(By.xpath("//table[@class='table']//tbody"));
 					System.out.println("                                            ");
 					System.out.println("******Agent promated**** ");
-
 					System.out.println("\n\n");
 					System.out.println("Agent promated list: " + agentlist3.size());
-					for (WebElement tab3 : agentlist3) {
-
+					for (WebElement tab3 : agentlist3)
+					{
 						// System.out.println("\n\n");
 						Thread.sleep(3000);
-
 						System.out.println("Agent promated:" + tab3.getText());
 					}
-
 				}
 				WebElement logout = driver.findElement(By.xpath("//div[@class='main-panel']//li[2]//a[1]"));
 				logout.click();
@@ -128,7 +125,6 @@ public class Agent_Promations_list {
 		driver.navigate().back();
 
 	}
-
 	@AfterTest
 	public void admin() throws InterruptedException {
 
@@ -139,7 +135,6 @@ public class Agent_Promations_list {
 		Thread.sleep(3000);
 		WebElement adminusername = driver.findElement(By.xpath("//input[@id='emailId']"));
 		adminusername.sendKeys("jitesh@jjbytes.com");
-
 		WebElement adminpassword = driver.findElement(By.xpath("//input[@id='password']"));
 		adminpassword.sendKeys("jjbytes@123");
 		Thread.sleep(3000);
@@ -152,16 +147,13 @@ public class Agent_Promations_list {
 		Thread.sleep(8000);
 		WebElement AgentPromata = driver.findElement(By.xpath("//p[contains(text(),'Agent Promotions')]"));
 		AgentPromata.click();
-
 		Thread.sleep(7000);
-
 		List<WebElement> agentlist5 = driver.findElements(By.xpath("//table[@class='table']//tbody"));
 		// System.out.println("Agent promations: ");
 		System.out.println("                                            ");
 		System.out.println("***Completed agent promotions****");
 		System.out.println(agentlist5.size());
 		for (WebElement tab5 : agentlist5) {
-
 			Thread.sleep(3000);
 			// System.out.println(tab2.getText());
 			System.out.println("                                            ");
@@ -171,7 +163,5 @@ public class Agent_Promations_list {
 		WebElement adminlogout = driver.findElement(By.xpath("//p[contains(text(),'Logout')]"));
 		adminlogout.click();
 		System.out.println("***Admin Logout****");
-
 	}
-
 }

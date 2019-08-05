@@ -2,20 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="97798" started-at="2019-07-11T06:00:35Z" finished-at="2019-07-11T06:02:13Z">
+  <suite name="Default suite" duration-ms="30867" started-at="2019-08-05T10:13:09Z" finished-at="2019-08-05T10:13:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="97798" started-at="2019-07-11T06:00:35Z" finished-at="2019-07-11T06:02:13Z">
-      <class name="MAF.Agent_Promations_list">
-        <test-method status="PASS" signature="Agenttask()[pri:0, instance:MAF.Agent_Promations_list@21213b92]" name="Agenttask" duration-ms="63457" started-at="2019-07-11T06:00:35Z" finished-at="2019-07-11T06:01:39Z">
+    <test name="Default test" duration-ms="30867" started-at="2019-08-05T10:13:09Z" finished-at="2019-08-05T10:13:40Z">
+      <class name="MAF.Maf_Base">
+        <test-method status="PASS" signature="setupWeb()[pri:0, instance:MAF.Maf_Base@192b07fd]" name="setupWeb" duration-ms="30762" started-at="2019-08-05T10:13:09Z" finished-at="2019-08-05T10:13:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Agenttask -->
-        <test-method status="PASS" signature="admin()[pri:0, instance:MAF.Agent_Promations_list@21213b92]" name="admin" is-config="true" duration-ms="34296" started-at="2019-07-11T06:01:39Z" finished-at="2019-07-11T06:02:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- admin -->
-      </class> <!-- MAF.Agent_Promations_list -->
+        </test-method> <!-- setupWeb -->
+      </class> <!-- MAF.Maf_Base -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -22,7 +22,7 @@ public class Agent_Login {
 		PageFactory.initElements(Maf_Base.getDriver(), this);
 	}
 
-	@FindBy(xpath = "//*[@id=\"collapseExample\"]/ul/li[6]/a")
+	@FindBy(xpath = "//a[contains(text(),'Agent Login')]")
 	public WebElement Loginbutton;
 
 	@FindBy(xpath = "//input[@id='agentId']")
@@ -31,7 +31,7 @@ public class Agent_Login {
 	@FindBy(xpath = "//input[@id='password']")
 	public WebElement Password;
 
-	@FindBy(xpath = "/html/body/app-root/app-root/app-auth-layout/div/div/app-agentlogin/div/div/div/form/div/div[3]/button")
+	@FindBy(xpath = "//button[@class='btn btn-info fw btn-round btn-lg btn-block mb-3']")
 	public WebElement Login;
 
 	@FindBy(xpath = "//*[@id=\"collapseExample\"]/ul/li/a/p")
@@ -42,10 +42,10 @@ public class Agent_Login {
 
 	@FindBy(xpath = "//*[@id=\"signUpModalID\"]/div/div/div/form/div[1]/div/div")
 	public WebElement usernameajax;
-
+    
 	@FindBy(xpath = "//*[@id=\"signUpModalID\"]/div/div/div/form/div[2]/div[2]/div")
 	public WebElement Passwordajax;
-
+    
 	@FindBy(xpath = "/html/body/div/div/div[3]/button[1]")
 	public WebElement ok;
 
@@ -55,23 +55,31 @@ public class Agent_Login {
 
 			Loginbutton.click();
 			Thread.sleep(3000);
-			username.sendKeys("Anjith");
+			username.sendKeys("AAA14");
 			Thread.sleep(3000);
-			Password.sendKeys("password");
+			Password.sendKeys("Jjbytes@123");
 			Thread.sleep(3000);
 			Login.click();
 			Thread.sleep(3000);
-
+			
 			// ok.click();
 			// Maf_Base.getDriver().switchTo().alert().accept();
 
-		} catch (Exception e) {
+		} 
+		catch (Exception e) 
+		{
 			// Takes the screenshot when test fails
 			File scrFile = ((TakesScreenshot) Maf_Base.getDriver()).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(scrFile, new File("D:\\screenshots\\failure.png"));
-
+			Thread.sleep(3000);
 		}
-
+        ok.isDisplayed();
+        
+        
+        
+        
+		
+		
 //		if(ok.isDisplayed())
 //		{
 //			ok.click();
@@ -83,11 +91,11 @@ public class Agent_Login {
 //			Password.sendKeys("@njith2008");
 //			Thread.sleep(2000);
 //			Login.click();
-//			
-//			
-//			
+		//Login.click();
+		//login.isdisplayed();
+		//Login.isPresent();
+		
 //		}	
 
 	}
-
 }

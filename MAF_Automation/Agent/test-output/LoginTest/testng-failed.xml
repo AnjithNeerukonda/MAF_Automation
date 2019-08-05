@@ -4,23 +4,11 @@
   <test thread-count="2" name="ParallelTest1 Browser Chrome(failed)" parallel="tests">
     <parameter name="myBrowser" value="chrome"/>
     <classes>
-      <class name="MAF.jav">
+      <class name="MAF.Responsibility_levels">
         <methods>
-          <include name="getBrowser"/>
-          <include name="testLogin"/>
+          <include name="Responsibility"/>
         </methods>
-      </class> <!-- MAF.jav -->
+      </class> <!-- MAF.Responsibility_levels -->
     </classes>
   </test> <!-- ParallelTest1 Browser Chrome(failed) -->
-  <test thread-count="2" name="ParallelTest2 Browser Firefox(failed)" parallel="tests">
-    <parameter name="myBrowser" value="firefox"/>
-    <classes>
-      <class name="MAF.jav">
-        <methods>
-          <include name="getBrowser"/>
-          <include name="testLogin"/>
-        </methods>
-      </class> <!-- MAF.jav -->
-    </classes>
-  </test> <!-- ParallelTest2 Browser Firefox(failed) -->
 </suite> <!-- Failed suite [LoginTest] -->

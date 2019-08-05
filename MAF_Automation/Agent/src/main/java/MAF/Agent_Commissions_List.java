@@ -15,29 +15,33 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.Parameters;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-public class Responsibility_levels {
-
+public class Agent_Commissions_List {
+	
+	
 	WebDriver driver;
 
 	File scr;
 	XSSFWorkbook wb;
 	Sheet sheet1;
 	FileInputStream fis;
-
+	
+	
+	public void policies() {
+		
+		
+	}
+	
 	@Test
-	@Parameters("myBrowser")
-	public void Responsibility() throws InterruptedException, IOException {
-
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\driver\\chromedriver.exe");
-//		ChromeOptions optn=new ChromeOptions();
-//		optn.addArguments("----headless");
-//		optn.setHeadless(true);
-		//driver = new ChromeDriver();
-		System.setProperty("webdriver.gecko.driver", "D:\\drivers\\geckodriver.exe");
-     	driver = new FirefoxDriver();
+	public void commission() throws InterruptedException, IOException {
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		//ChromeOptions optn=new ChromeOptions();
+//		System.setProperty("webdriver.gecko.driver", "D:\\drivers\\geckodriver.exe");
+//     	driver = new FirefoxDriver();
 		driver.get("http://localhost:4200/home");
 		driver.manage().window().maximize();
 		WebElement Loginbutton = driver.findElement(By.xpath("//a[contains(text(),'Agent Login')]"));
@@ -65,50 +69,44 @@ public class Responsibility_levels {
 				WebElement Login = driver
 						.findElement(By.xpath("//button[@class='btn btn-info fw btn-round btn-lg btn-block mb-3']"));
 				Login.click();
+				
 				Thread.sleep(3000);
 				Thread.sleep(8000);
-				WebElement lev = driver.findElement(By.xpath("//p[contains(text(),'Levels Hierarchy')]"));
+				WebElement lev = driver.findElement(By.xpath("//p[contains(text(),'Agent Commissions')]"));
 				lev.click();
-				System.out.println(" Currrent Agent Login:  " + user);
-				System.out.println("\n\n");
-				System.out.println(" Agent Responsibility Hierarchy  ");
+				Reporter.log("Current Agent is: "+ user);
+				System.out.println("Current Agent is :" + user);
+				Reporter.log("Total commission of: "+ user);
+				System.out.println("Total commission of " + user);
 				Thread.sleep(5000);
-				// WebElementg
-				// tab=driver.findElement(By.xpath("//div[@class='main-content']//div[2]//div[1]//div[2]//ul[2]"));
+//				List<WebElement> Commissiontable = driver
+//						.findElements(By.xpath("//div[@class='card-body']"));
 				
+				
+	
 				List<WebElement> Commissiontable = driver
-						.findElements(By.xpath("//div[@class='row']//div[1]//div[1]//div[2]"));
-				
+						.findElements(By.xpath("//body//tbody//tr[1]"));
+				Reporter.log("Headers in table are below:");
 				System.out.println("Headers in table are below:");
+				Reporter.log("Total headers found:"+ Commissiontable.size());
 				System.out.println("Total headers found: " + Commissiontable.size());
 				for (WebElement tab1 : Commissiontable)
-				{   
+				{
 					System.out.println(tab1.getText());
-		  			Thread.sleep(4000);
-					System.out.println("\n\n");
-					System.out.println("Commission Hierarchy for :" +user);
-					List<WebElement> Commissiontable1 = driver
-							.findElements(By.xpath("//div[@class='main-content']//div[2]//div[1]//div[2]"));
-					for (WebElement tab2 : Commissiontable1)
-					{
-						System.out.println(tab2.getText());
-						Thread.sleep(4000);
-						System.out.println("\n\n");
-						System.out.println("Completed Both Responsibility and commission of : " + user);
-						System.out.println("\n\n");
-						System.out.println("****Login Into the next Agent*****");
-						
-					     
+					Thread.sleep(4000);
+					
+					System.out.println("Cureent agent commission list is completed");
+					
 				}
 				WebElement logout = driver.findElement(By.xpath("//div[@class='main-panel']//li[2]//a[1]"));
 				logout.click();
 			}
 		}
-		}
-		catch (Exception e) 
-		{
+
+		catch (Exception e) {
 
 			e.printStackTrace();
 		}
 	}
+
 }

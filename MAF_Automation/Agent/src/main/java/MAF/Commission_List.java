@@ -7,12 +7,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 public class Commission_List {
 
 	WebDriver driver;
 
 	@BeforeTest
+	@Parameters("myBrowser")
 	public void list() throws InterruptedException {
 
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\driver\\chromedriver.exe");

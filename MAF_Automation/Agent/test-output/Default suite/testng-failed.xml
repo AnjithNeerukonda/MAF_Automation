@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MAF.Agent_Promations_list">
+      <class name="MAF.Maf_Base">
         <methods>
-          <include name="Agenttask"/>
-          <include name="admin"/>
+          <include name="setupWeb"/>
         </methods>
-      </class> <!-- MAF.Agent_Promations_list -->
+      </class> <!-- MAF.Maf_Base -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

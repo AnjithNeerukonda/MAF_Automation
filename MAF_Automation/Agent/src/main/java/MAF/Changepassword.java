@@ -34,6 +34,7 @@ public class Changepassword {
 //		aobj.admin_Pswd.sendKeys("jjbytes@123");
 //		Thread.sleep(3000);
 //		aobj.admin_submit.click();
+			
 			Thread.sleep(3000);
 			Thread.sleep(3000);
 			changepassword.click();
@@ -45,15 +46,22 @@ public class Changepassword {
 			confirmpassword.sendKeys("Anjith2@08");
 			Thread.sleep(3000);
 			submit.click();
-
-			if (ok.isDisplayed()) {
+			
+			if (ok.isDisplayed()) 
+			{
 				ok.click();
 				oldpassword.clear();
 				newpassword.clear();
 				confirmpassword.clear();
-
+				confirmpassword.notifyAll();
+				
+				
+				
 			}
-		} catch (Exception NoSuchElementException) {
+		} 
+		
+		catch (Exception NoSuchElementException)
+		{
 
 			Maf_Base.getDriver().close();
 		}

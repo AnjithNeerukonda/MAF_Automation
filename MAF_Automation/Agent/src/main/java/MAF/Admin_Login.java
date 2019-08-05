@@ -24,7 +24,7 @@ public class Admin_Login {
 		PageFactory.initElements(Maf_Base.getDriver(), this);
 	}
 
-	@FindBy(xpath = "//*[@id=\"navigation\"]/ul/li[5]/a")
+	@FindBy(xpath = "//a[contains(text(),'Admin Login')]")
 	public WebElement admin_button;
 
 	@FindBy(id = "emailId")
@@ -33,7 +33,7 @@ public class Admin_Login {
 	@FindBy(css = "#password")
 	public WebElement admin_Pswd;
 
-	@FindBy(xpath = "/html/body/app-root/app-root/app-auth-layout/div/div/app-adminlogin/div/div/div/form/div/div[3]/button")
+	@FindBy(xpath = "//button[@class='fw btn btn-info btn-round btn-lg btn-block mb-3']")
 	public WebElement admin_submit;
 
 	@FindBy(xpath = "/html/body/app-root/app-root/app-adminlayout/div/app-sidebar/div/div[2]/ul/li[2]/a/p")
@@ -80,6 +80,10 @@ public class Admin_Login {
 
 	@FindBy(css = ".swal2-confirm")
 	public WebElement yes;
+	
+	
+	@FindBy(xpath="//p[contains(text(),'Agent Policies List')]")
+	public WebElement policy;
 //	@FindBy(css=".swal2-confirm")
 //	public WebElement Rej;
 
@@ -92,18 +96,45 @@ public class Admin_Login {
 		admin_button.click();
 		// Thread.sleep(3000);
 		admin_username.sendKeys("jitesh@jjbytes.com");
-
 		admin_Pswd.sendKeys("jjbytes@123");
 		// Thread.sleep(3000);
 		admin_submit.click();
-		Cookie name = new Cookie("T", "2GHCYCGVJVVUVUV");
-		Cookie name1 = new Cookie("S", "CKGCUVKUIVI");
-		Cookie name2 = new Cookie("SA", "Cjnjjnkj");
-		Cookie name3 = new Cookie("AC", "njnjk");
-		Cookie name4 = new Cookie("EA", "bsxaxa");
-
-		Maf_Base.getDriver().manage().addCookie(name);
-		Maf_Base.getDriver().manage().addCookie(name1);
+		 Thread.sleep(7000);
+		 policy.click();
+		 Thread.sleep(3000);
+		 List<WebElement> agentpolicy = Maf_Base.getDriver().findElements(By.xpath("//tbody//tr"));
+		 System.out.println("Total rows: " + agentpolicy.size());
+			for (WebElement tab1 : agentpolicy)
+			{
+				System.out.println(tab1.getText());
+				Thread.sleep(4000);
+				System.out.println("complete");
+			
+				
+				
+//				 List<WebElement> explore = Maf_Base.getDriver().findElements(By.xpath("//tr//td[14]//button[1]"));
+//				 
+//				 System.out.println("Total rows: " + explore.size());
+//					for (WebElement tab2 : explore)
+//					{
+//						explore = Maf_Base.getDriver().findElements(By.xpath("//tr[4]//td[14]//button[1]"));
+//						tab2.click();
+//						Thread.sleep(5000);
+//						Maf_Base.getDriver().navigate().back();
+//						Thread.sleep(4000);
+//						System.out.println("complete");
+						
+					}
+				
+		
+//		Cookie name = new Cookie("T", "2GHCYCGVJVVUVUV");
+//		Cookie name1 = new Cookie("S", "CKGCUVKUIVI");
+//		Cookie name2 = new Cookie("SA", "Cjnjjnkj");
+//		Cookie name3 = new Cookie("AC", "njnjk");
+//		Cookie name4 = new Cookie("EA", "bsxaxa");
+//
+//		Maf_Base.getDriver().manage().addCookie(name);
+//		Maf_Base.getDriver().manage().addCookie(name1);
 
 		// Maf_Base.get
 		// Maf_Base.getDriver().switchTo().alert().accept();
@@ -116,6 +147,7 @@ public class Admin_Login {
 //		approve.click();
 //		yes.click();
 		// reject.click();
+
 
 //			if(ok.isDisplayed())
 //			{
@@ -132,8 +164,6 @@ public class Admin_Login {
 //			
 //			
 //		}	
-
-//		
 //		if(appoint.isDisplayed()) {
 //			
 //			Maf_Base.getDriver().navigate().back();

@@ -4,13 +4,13 @@
 	<test name="ParallelTest1 Browser Chrome">
 		<parameter name="myBrowser" value="chrome" />
 		<classes>
-			<class name="MAF.MultipleTest" />
+			<class name="MAF.Responsibility_levels" />
 		</classes>
 	</test> <!-- Test -->
 	<test name="ParallelTest2 Browser Firefox">
 		<parameter name="myBrowser" value="firefox" />
 		<classes>
-			<class name="MAF.MultipleTest" />
+		<class name="MAF.Commission_List" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

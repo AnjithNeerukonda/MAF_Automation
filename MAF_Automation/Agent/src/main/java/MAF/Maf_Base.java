@@ -26,46 +26,41 @@ import org.testng.annotations.Test;
 import cucumber.api.java.Before;
 
 public class Maf_Base {
-	public static WebDriver driver;
+	static WebDriver driver=null;
+	
+	static String browser="Chrome";
+	static String url="http://localhost:4200/home";
 
 	@Test
 	public static void setupWeb() throws InterruptedException, IOException, AWTException {
 
-//	        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-//	        ChromeOptions options = new ChromeOptions();
-//	        options.addArguments("--incognito");
-//	        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-//	        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\driver\\chromedriver.exe");
-//			driver = new ChromeDriver(capabilities);  
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\driver\\chromedriver.exe");
-		driver = new ChromeDriver();
-//	    	System.setProperty("webdriver.gecko.driver", "D:\\drivers\\geckodriver.exe");
-//	     	driver = new FirefoxDriver();
+			
+			if(browser.equalsIgnoreCase("Chrome")) {
+				
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\driver\\chromedriver.exe");
+			    driver = new ChromeDriver();
+			    driver.manage().window().maximize();
+				driver.get(url);
+				System.out.println(driver.getTitle());
+				driver.manage().deleteAllCookies();
+			}
+			
+			if(browser.equalsIgnoreCase("Firefox")) {
+				
+				System.setProperty("webdriver.gecko.driver", "D:\\drivers\\geckodriver.exe");
+		     	driver = new FirefoxDriver();
+		     	driver.manage().window().maximize();
+				driver.get(url);
+				System.out.println(driver.getTitle());
+				driver.manage().deleteAllCookies();
+				
+			}
+			
+	
+	  	
+		
 
-		driver.manage().window().maximize();
-		driver.get("http://localhost:4200/home");
-		// driver.get("file://Downloads/Max Agent Financial.html");
-		System.out.println(driver.getTitle());
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
-		// Robot robot = new Robot();
-		test tobj = new test();
-		// tobj.
-
-//		    robot.keyPress(KeyEvent.VK_CONTROL);
-//		    robot.keyPress(KeyEvent.VK_MINUS);
-//		    robot.keyRelease(KeyEvent.VK_CONTROL);
-//		    robot.keyRelease(KeyEvent.VK_MINUS);
-//		    Thread.sleep(3000);  
-//		    robot.keyPress(KeyEvent.VK_CONTROL);
-//		    robot.keyPress(KeyEvent.VK_EQUALS);
-//		    robot.keyRelease(KeyEvent.VK_CONTROL);
-//		    robot.keyRelease(KeyEvent.VK_EQUALS);
-
-//		    JavascriptExecutor jse = (JavascriptExecutor)driver;
-//		    jse.executeScript("document.body.style.zoom = '30%';");
-//		    jse.executeScript("document.body.style.zoom = '125%';");
-
+		    
 		// Agent_tasks agobj=new Agent_tasks();
 		// agobj.mypromations();
 		// agobj.promations();
@@ -99,14 +94,17 @@ public class Maf_Base {
 
 //		    Insurence inobj=new Insurence();
 //		   	inobj.addinsu();
+//		   	
+//		   	Agent_Commissions_List aclobj=new Agent_Commissions_List();
+//		   	aclobj.commission();
 
 //		    Multi_Log_insu lobj=new Multi_Log_insu();
 //	    	lobj.Loginsurence();
 
 		// ADMIN METHODS
 
-//		    Admin_Login adobj=new Admin_Login();
-//	     	adobj.Longin();
+		    Admin_Login adobj=new Admin_Login();
+	     	adobj.Longin();
 //	     	adobj.viewlist();
 
 //	     	Changepassword chobj=new Changepassword();

@@ -27,7 +27,7 @@ public class listdropdown {
 		Select se = new Select((WebElement) Maf_Base.getDriver().findElement(By.xpath(
 				"/html[1]/body[1]/app-root[1]/app-root[1]/app-layout[1]/section[1]/app-register[1]/div[2]/div[1]/div[3]/form[1]/div[12]/div[2]/div[1]/div[1]/select[1]")));
 		se.selectByIndex(5);
-		Thread.sleep(2000);
+		Thread.sleep(2000);		
 		// System.out.println(se.getFirstSelectedOption());
 		// String arr[]= {"Conway", "Jonesboro",};
 		Select se1 = new Select((WebElement) Maf_Base.getDriver().findElement(By.xpath(
@@ -35,15 +35,16 @@ public class listdropdown {
 		Thread.sleep(5000);
 		List<WebElement> dropdown = se1.getOptions();
 		System.out.println(dropdown.size());
-		for (int i = 0; i < dropdown.size(); i++) {
+		for (int i = 0; i < dropdown.size(); i++)
+		{
 			System.out.println(dropdown.get(i).getText());
-
 			// Assert.assertEquals(arr[i], dropdown.get(i).getText());
 		}
 		Thread.sleep(3000);
+		
 		// System.out.println("Verified");
 		Maf_Base.getDriver().close();
-
+		Thread.sleep(3000);
+		
 	}
-
 }
